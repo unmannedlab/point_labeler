@@ -15,23 +15,56 @@
 
 ## Dependencies
 
-* Ubuntu
-* Docker
-* Nvidia GPU Driver 
-* nvidia-docker 
+* catkin
+* Eigen >= 3.2
+* boost >= 1.54
+* QT >= 5.2
+* OpenGL Core Profile >= 4.0
+* [glow](https://github.com/jbehley/glow) (catkin package)
  
 ## Build
-* Install [Ubuntu Docker](https://docs.docker.com/engine/install/ubuntu/)
-* Run command 'nvidia-smi' to check nvidia driver
-* Install [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) 
-* `git clone https://github.com/unmannedlab/point_labeler.git`
-* `cd point_labeler`
-* `./build`
+  
+On Ubuntu 16.04 and 18.04, most of the dependencies can be installed from the package manager:
+```bash
+sudo apt install git libeigen3-dev libboost-all-dev qtbase5-dev libglew-dev catkin
+```
+
+Additionally, make sure you have [catkin-tools](https://catkin-tools.readthedocs.io/en/latest/) and the [fetch](https://github.com/Photogrammetry-Robotics-Bonn/catkin_tools_fetch) verb installed:
+```bash
+sudo apt install python-pip
+sudo pip install catkin_tools catkin_tools_fetch empy
+```
+
+If you do not have a catkin workspace already, create one:
+```bash
+cd
+mkdir catkin_ws
+cd catkin_ws
+mkdir src
+catkin init
+cd src
+git clone https://github.com/ros/catkin.git
+```
+Clone the repository in your catkin workspace:
+```bash
+cd ~/catkin_ws/src
+git clone https://github.com/jbehley/point_labeler.git
+```
+Download the additional dependencies:
+```bash
+catkin deps fetch
+```
+Then, build the project:
+```bash
+catkin build point_labeler
+```
+Now the project root directory (e.g. `~/catkin_ws/src/point_labeler`) should contain a `bin` directory containing the labeler.
 
 
 ## Usage
-Using `./run /path/to/dataset` command to run docker image.
-Then run `cd root/catkin_ws/src/point_labeler/bin`, just run `./labeler` to start the labeling tool. 
+
+
+In the `bin` directory, just run `./labeler` to start the labeling tool. 
 
 The labeling tool allows to label a sequence of point clouds in a tile-based fashion, i.e., the tool loads all scans overlapping with the current tile location.
 Thus, you will always label the part of the scans that overlaps with the current tile.

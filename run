@@ -1,4 +1,10 @@
 #!/bin/bash
+if [ -n "$1" ] ; then
+    DATAPATH="$1"
+else
+    echo -n "Enter data path: "
+    read DATAPATH
+fi
 XSOCK=/tmp/.X11-unix
 XAUTH=/tmp/.docker.xauth
 touch $XAUTH
@@ -8,8 +14,7 @@ docker run -it \
         --name="cartogapoint_labeler" \
         --volume=$XSOCK:$XSOCK:rw \
         --volume=$XAUTH:$XAUTH:rw \
-        -v /media/maskjp/Datasets1:/dataset \
- 	-v /home/maskjp/Datasets:/dataset2 \
+        -v $DATAPATH:/dataset \
         --env="XAUTHORITY=${XAUTH}" \
         --env="DISPLAY" \
         --env="UID=`id -u $who`" \

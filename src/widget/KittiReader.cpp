@@ -21,7 +21,7 @@ void KittiReader::initialize(const QString& directory) {
   tiles_.clear();
 
   base_dir_ = QDir(directory);
-  QDir velodyne_dir(base_dir_.filePath("velodyne"));
+  QDir velodyne_dir(base_dir_.filePath("os1_cloud_node_kitti_bin"));
   QStringList entries = velodyne_dir.entryList(QDir::Files, QDir::Name);
   for (int32_t i = 0; i < entries.size(); ++i) {
     velodyne_filenames_.push_back(velodyne_dir.filePath(entries.at(i)).toStdString());
@@ -60,7 +60,7 @@ void KittiReader::initialize(const QString& directory) {
   }
 
   std::string missing_img = QDir::currentPath().toStdString() + "/../assets/missing.png";
-  QDir image_dir(base_dir_.filePath("image_2"));
+  QDir image_dir(base_dir_.filePath("pylon_camera_node"));
   for (uint32_t i = 0; i < velodyne_filenames_.size(); ++i) {
     QString filename = QFileInfo(QString::fromStdString(velodyne_filenames_[i])).baseName() + ".png";
     if (image_dir.exists(filename)) {

@@ -1,292 +1,359 @@
 <!-- mapilary labels, see https://research.mapillary.com/img/publications/ICCV17a.pdf  
    and supplement: https://research.mapillary.com/img/publications/ICCV17a_supp.pdf -->
 <config>
-    <label>
-        <id>0</id>
-        <name>void</name>
-        <description>void</description>
-        <color>0 0 0</color>
-        <root>void</root>
-        <macro></macro>
-        <category>unlabeled</category>
-    </label>
-    <label>
-        <id>1</id>
-        <name>dirt</name>
-        <description>dirt</description>
-        <color>108 64 20</color>
-        <root>void</root>
-        <macro></macro>
-        <category>dirt</category>
-    </label>
-    <label>
-        <id>2</id>
-        <name>sand</name>
-        <description>sand</description>
-        <color>255 229 204</color>
-        <root>void</root>
-        <macro></macro>
-        <category>sand</category>
-    </label>
+	<label>
+		<id>0</id>
+		<name>unlabeled</name>
+		<description>all points with no special label.</description>
+		<color>0 0 0</color>
+		<root>void</root>
+		<macro></macro>
+		<category>unlabeled</category>
+	</label>
+
+	<label>
+		<id>1</id>
+		<name>outlier</name>
+		<description>all points which are outliers, i.e., caused by reflection, etc..</description>
+		<color>255 0 0</color>
+		<root>void</root>
+		<macro></macro>
+		<category>outlier</category>
+	</label>
     <label>
         <id>3</id>
         <name>grass</name>
         <description>grass</description>
-        <color>0 102 0</color>
+        <color>150 240 80</color>
         <root>void</root>
         <macro></macro>
         <category>grass</category>
-    </label>
-    <label>
+	</label>
+	<label>
         <id>4</id>
         <name>tree</name>
         <description>tree</description>
-        <color>0 255 0</color>
+        <color>0 175 0</color>
         <root>void</root>
         <macro></macro>
         <category>tree</category>
     </label>
-    <label>
-        <id>5</id>
-        <name>pole</name>
-        <description>pole</description>
-        <color>0 153 153</color>
-        <root>void</root>
-        <macro></macro>
-        <category>pole</category>
-    </label>
-    <label>
-        <id>6</id>
-        <name>water</name>
-        <description>water</description>
-        <color>0 128 255</color>
-        <root>void</root>
-        <macro></macro>
-        <category>water</category>
-    </label>
-    <label>
-        <id>7</id>
-        <name>sky</name>
-        <description>sky</description>
-        <color>0 0 255</color>
-        <root>void</root>
-        <macro></macro>
-        <category>sky</category>
-    </label>
-    <label>
-        <id>8</id>
-        <name>vehicle</name>
-        <description>vehicle</description>
-        <color>255 255 0</color>
-        <root>void</root>
-        <macro></macro>
-        <category>vehicle</category>
-    </label>
-    <label>
-        <id>9</id>
-        <name>container/generic-object</name>
-        <description>container/generic-object</description>
-        <color>255 0 127</color>
-        <root>void</root>
-        <macro></macro>
-        <category>container/generic-object</category>
-    </label>
-    <label>
-        <id>10</id>
-        <name>asphalt</name>
-        <description>asphalt</description>
-        <color>64 64 64</color>
-        <root>void</root>
-        <macro></macro>
-        <category>asphalt</category>
-    </label>
-    <label>
-        <id>11</id>
-        <name>gravel</name>
-        <description>gravel</description>
-        <color>255 128 0</color>
-        <root>void</root>
-        <macro></macro>
-        <category>gravel</category>
-    </label>
-    <label>
-        <id>12</id>
-        <name>building</name>
-        <description>building</description>
-        <color>255 0 0</color>
-        <root>void</root>
-        <macro></macro>
-        <category>building</category>
-    </label>
-    <label>
-        <id>13</id>
-        <name>mulch</name>
-        <description>mulch</description>
-        <color>153 76 0</color>
-        <root>void</root>
-        <macro></macro>
-        <category>mulch</category>
-    </label>
-    <label>
-        <id>14</id>
-        <name>rock-bed</name>
-        <description>rock-bed</description>
-        <color>102 102 0</color>
-        <root>void</root>
-        <macro></macro>
-        <category>rock-bed</category>
-    </label>
-    <label>
-        <id>15</id>
-        <name>log</name>
-        <description>log</description>
-        <color>102 0 0</color>
-        <root>void</root>
-        <macro></macro>
-        <category>log</category>
-    </label>
-    <label>
-        <id>16</id>
-        <name>bicycle</name>
-        <description>bicycle</description>
-        <color>0 255 128</color>
-        <root>void</root>
-        <macro></macro>
-        <category>bicycle</category>
-    </label>
-    <label>
-        <id>17</id>
-        <name>person</name>
-        <description>person</description>
-        <color>204 153 255</color>
-        <root>void</root>
-        <macro></macro>
-        <category>person</category>
-    </label> 
-    <label>
-        <id>18</id>
-        <name>fence</name>
-        <description>fence</description>
-        <color>102 0 204</color>
-        <root>void</root>
-        <macro></macro>
-        <category>fence</category>
-    </label> 
-    <label>
+	<label>
+		<id>10</id>
+		<name>car</name>
+		<description>This includes cars, jeeps, SUVs, vans with a continuous body shape (i.e. the driver cabin and cargo compartment are one)</description>
+		<color>100 150 245</color>
+		<root>vehicle</root>
+		<macro>vehicle</macro>
+		<category>car</category>
+		<moving>252</moving>
+		<instanceable>true</instanceable>
+	</label>
+	<label>
+		<id>11</id>
+		<name>bicycle</name>
+		<description>Includes bicycles without the cyclist or possibly other passengers. The cyclist and passengers recieve the label cyclist.</description>
+		<color>100 230 245</color>
+		<root>vehicle</root>
+		<macro>vehicle</macro>
+		<category>bicycle</category>
+		<instanceable>true</instanceable>
+	</label>
+	<label>
+		<id>15</id>
+		<name>motorcycle</name>
+		<description>This includes motorcycles, mopeds without the driver or other passengers. Both driver and passengers recieve the label motorcyclist.</description>
+		<color>30 60 150</color>
+		<root>vehicle</root>
+		<macro>vehicle</macro>
+		<category>motorcycle</category>
+		<instanceable>true</instanceable>
+	</label>
+	<label>
+		<id>16</id>
+		<name>on rails</name>
+		<description>All vehicles moving on rails, e.g., trams, trains.</description>
+		<color>0 0 255</color>
+		<root>vehicle</root>
+		<macro>vehicle</macro>
+		<category>on rails</category>
+		<moving>256</moving>
+		<instanceable>true</instanceable>
+	</label>
+	<label>
+		<id>13</id>
+		<name>bus</name>
+		<description>Includes buses that are intended for 9+ persons for public or long-distance transport.</description>
+		<color>100 80 250</color>
+		<root>vehicle</root>
+		<macro>vehicle</macro>
+		<category>bus</category>
+		<moving>257</moving>
+		<instanceable>true</instanceable>
+	</label>
+	<label>
+		<id>18</id>
+		<name>truck</name>
+		<description>This includes trucks, vans with a body that is separate from the driver cabin, pickup trucks, as well as their attached trailers.</description>
+		<color>80 30 180</color>
+		<root>vehicle</root>
+		<macro>vehicle</macro>
+		<category>truck</category>
+		<moving>258</moving>
+		<instanceable>true</instanceable>
+	</label>
+	<label>
         <id>19</id>
         <name>bush</name>
         <description>bush</description>
-        <color>255 153 204</color>
+        <color>0 175 0</color>
         <root>void</root>
         <macro></macro>
         <category>bush</category>
     </label> 
+	<label>
+		<id>20</id>
+		<name>other-vehicle</name>
+		<description>Cravans, Trailers and fallback category for vehicles not explicitly defined otherwise in meta category level vehicle.</description>
+		<color>0 0 255</color>
+		<root>vehicle</root>
+		<macro>vehicle</macro>
+		<category>other-vehicle</category>
+		<moving>259</moving>
+		<instanceable>true</instanceable>
+	</label>
+
+	<label>
+		<id>30</id>
+		<name>person</name>
+		<description>Persons moving by their own legs, sitting, or any unusual pose, but not meant to drive a vehicle.</description>
+		<color>255 30 30</color>
+		<root>human</root>
+		<macro></macro>
+		<category>person</category>
+		<moving>254</moving>
+		<instanceable>true</instanceable>
+	</label>
+	<label>
+		<id>31</id>
+		<name>bicyclist</name>
+		<description>Humans driving a bicycle.</description>
+		<color>255 40 200</color>
+		<root>human</root>
+		<macro>rider</macro>
+		<category>bicyclist</category>
+		<moving>253</moving>
+		<instanceable>true</instanceable>
+	</label>
+	<label>
+		<id>32</id>
+		<name>motorcyclist</name>
+		<description>Persons riding a motorcycle.</description>
+		<color>150 30 90</color>
+		<root>human</root>
+		<macro>rider</macro>
+		<category>motorcyclist</category>
+		<moving>255</moving>
+		<instanceable>true</instanceable>
+	</label>
+
+	<label>
+		<id>40</id>
+		<name>road</name>
+		<description></description>
+		<color>255 0 255</color>
+		<root>ground</root>
+		<macro>flat</macro>
+		<category>road</category>
+	</label>
+
+	<label>
+		<id>44</id>
+		<name>parking</name>
+		<description></description>
+		<color>255 150 255</color>
+		<root>ground</root>
+		<macro>flat</macro>
+		<category>parking</category>
+	</label>
+	<!--  label>
+		<id>45</id>
+		<name>pedestrian area</name>
+		<description></description>
+		<color>150 150 150</color>
+		<root>construction</root>
+		<macro>flat</macro>
+		<category>pedestrian area</category>
+	</label-->
+
+	<!--  label>
+		<id>47</id>
+		<name>service lane</name>
+		<description></description>
+		<color>150 150 150</color>
+		<root>construction</root>
+		<macro>flat</macro>
+		<category>serice lane</category>
+	</label-->
+	<label>
+		<id>48</id>
+		<name>sidewalk</name>
+		<description>Areas used mainly by pedestrians, bicycles, but not meant for driving.</description>
+		<color>75 0 75</color>
+		<root>ground</root>
+		<macro>flat</macro>
+		<category>sidewalk</category>
+	</label>
+	<label>
+		<id>49</id>
+		<name>other-ground</name>
+		<description>Other areas that are not used by pedestrians or meant for driving.</description>
+		<color>175 0 75</color>
+		<root>ground</root>
+		<macro>flat</macro>
+		<category>other-ground</category>
+	</label>
     <label>
-        <id>20</id>
-        <name>sign</name>
-        <description>sign</description>
-        <color>0 102 102</color>
+        <id>17</id>
+        <name>person</name>
+        <description>person</description>
+        <color>255 30 30</color>
         <root>void</root>
         <macro></macro>
-        <category>sign</category>
-    </label> 
-    <label>
-        <id>21</id>
-        <name>rock</name>
-        <description>rock</description>
-        <color>153 204 255</color>
-        <root>void</root>
-        <macro></macro>
-        <category>rock</category>
-    </label> 
-    <label>
-        <id>22</id>
-        <name>bridge</name>
-        <description>bridge</description>
-        <color>102 255 255</color>
-        <root>void</root>
-        <macro></macro>
-        <category>bridge</category>
-    </label> 
-    <label>
-        <id>23</id>
-        <name>concrete</name>
-        <description>concrete</description>
-        <color>101 101 11</color>
-        <root>void</root>
-        <macro></macro>
-        <category>concrete</category>
-    </label> 
-    <label>
-        <id>24</id>
-        <name>picnic-table</name>
-        <description>picnic-table</description>
-        <color>114 85 47</color>
-        <root>void</root>
-        <macro></macro>
-        <category>picnic-table</category>
-    </label> 
+        <category>person</category>
+	</label> 
     <label>
         <id>27</id>
         <name>Man-made</name>
         <description>Man-made</description>
-        <color>41 121 255</color>
+        <color>50 255 255</color>
         <root>void</root>
         <macro></macro>
         <category>Man-made</category>
     </label> 
-    <label>
-        <id>29</id>
-        <name>Uphill</name>
-        <description>Uphill</description>
-        <color>101 31 255</color>
-        <root>void</root>
-        <macro></macro>
-        <category>Uphill</category>
-    </label> 
-    <label>
-        <id>30</id>
-        <name>Downhill</name>
-        <description>Downhill</description>
-        <color>137 149 9</color>
-        <root>void</root>
-        <macro></macro>
-        <category>Downhill</category>
-    </label> 
-    <label>
-        <id>31</id>
-        <name>Puddle</name>
-        <description>Puddle</description>
-        <color>134 255 239</color>
-        <root>void</root>
-        <macro></macro>
-        <category>Puddle</category>
-    </label>
-    <label>
-        <id>32</id>
-        <name>Deep</name>
-        <description>Deep</description>
-        <color>29 105 136</color>
-        <root>void</root>
-        <macro></macro>
-        <category>Deep</category>
-    </label>  
-    <label>
-        <id>33</id>
-        <name>Mud</name>
-        <description>Mud</description>
-        <color>99 66 34</color>
-        <root>void</root>
-        <macro></macro>
-        <category>Mud</category>
-    </label>  
-    <label>
-        <id>34</id>
-        <name>Rubble</name>
-        <description>Rubble</description>
-        <color>110 22 138</color>
-        <root>void</root>
-        <macro></macro>
-        <category>Rubble</category>
-    </label>  
+	<label>
+		<id>50</id>
+		<name>building</name>
+		<description>Building walls, doors, etc.</description>
+		<color>255 200 0</color>
+		<root>structure</root>
+		<macro>structure</macro>
+		<category>building</category>
+	</label>
+	<label>
+		<id>51</id>
+		<name>fence</name>
+		<description>fences, small walls, crash barriers, etc.</description>
+		<color>255 120 50</color>
+		<root>structure</root>
+		<macro>structure</macro>
+		<category>other structure</category>
+	</label>
+
+	<label>
+		<id>52</id>
+		<name>other-structure</name>
+		<description></description>
+		<color>255 150 0</color>
+		<root>structure</root>
+		<macro>structure</macro>
+		<category>other-structure</category>
+	</label>
+
+	<!--label>
+    <id>61</id>
+    <name>crosswalk zebra</name>
+    <description>Crosswalk indicated by a zebra pattern</description>
+    <color>0 100 80</color>
+    <root>marking</root>
+    <macro></macro>
+    <category>crosswalk zebra</category>
+  </label-->
+	<label>
+		<id>60</id>
+		<name>lane marking</name>
+		<description>Other lane markings, including dashed and 
+    solid lane seperation makrings, stop lines, text, arrows, 
+    or restricted areas.</description>
+		<color>150 255 170</color>
+		<root>ground</root>
+		<macro></macro>
+		<category>lane marking</category>
+	</label>
+	<label>
+		<id>70</id>
+		<name>vegetation</name>
+		<description>Trees, and other forms of  vertical growing vegetation.</description>
+		<color>0 175 0</color>
+		<root>nature</root>
+		<macro></macro>
+		<category>vegetation</category>
+	</label>
+	<label>
+		<id>71</id>
+		<name>trunk</name>
+		<description>tree trunks.</description>
+		<color>135 60 0</color>
+		<root>nature</root>
+		<macro></macro>
+		<category>trunk</category>
+	</label>
+	<label>
+		<id>72</id>
+		<name>terrain</name>
+		<description>grass and all other types  of horizontal spreading vegetation, including soil.</description>
+		<color>150 240 80</color>
+		<root>nature</root>
+		<macro></macro>
+		<category>terrain</category>
+	</label>
+
+	<label>
+		<id>80</id>
+		<name>pole</name>
+		<description>thin and elongated, typically vertically oriented poles, eg. sing or traffic signs.</description>
+		<color>255 240 150</color>
+		<root>object</root>
+		<macro>support</macro>
+		<category>pole</category>
+	</label>
+	<label>
+		<id>81</id>
+		<name>traffic sign</name>
+		<description>traffic signs without pole.</description>
+		<color>255 0 0</color>
+		<root>object</root>
+		<macro>traffic-sign</macro>
+		<category>traffic sign</category>
+	</label>
+
+	<!--label>
+    <id>90</id>
+    <name>bench</name>
+    <description>A place to sit on</description>
+    <color>255 125 0</color>
+    <root>object</root>
+    <macro>object</macro>
+    <category>bench</category>
+  </label-->
+	<!--label>
+    <id>91</id>
+    <name>trash can</name>
+    <description>Recycling facility for waste collection.</description>
+    <color>125 255 0</color>
+    <root>object</root>
+    <macro>object</macro>
+    <category>trash can</category>
+  </label-->
+
+	<label>
+		<id>99</id>
+		<name>other-object</name>
+		<description>other small/convex objects on the street, where we now have not a specific label.</description>
+		<color>50 255 255</color>
+		<root>object</root>
+		<macro>object</macro>
+		<category>other-object</category>
+	</label>
+
 </config>

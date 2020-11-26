@@ -529,7 +529,7 @@ void Mainframe::open() {
   if (!retValue.isNull()) {
     QDir base_dir(retValue);
 
-    if (!base_dir.exists("velodyne") || !base_dir.exists("poses.txt")) {
+    if (!base_dir.exists("os1_cloud_node_kitti_bin") || !base_dir.exists("poses.txt")) {
       std::cout << "[ERROR] velodyne or poses.txt missing." << std::endl;
       return;
     }

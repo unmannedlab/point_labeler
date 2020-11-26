@@ -90,8 +90,8 @@ if __name__ == "__main__":
   if not os.path.exists(image_path): raise IOError("images not found: {}".format(image_path))
   if not os.path.exists(pose_path): raise IOError("oxts information not found: {}".format(pose_path))
 
-  out_lidar_path = os.path.join(output_folder, "velodyne")
-  out_image_path = os.path.join(output_folder, "image_2")
+  out_lidar_path = os.path.join(output_folder, "os1_cloud_node_kitti_bin")
+  out_image_path = os.path.join(output_folder, "pylon_camera_node")
 
   # last chance to not overwrite stuff
   if os.path.exists(out_lidar_path) or os.path.exists(out_image_path):

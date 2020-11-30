@@ -1,7 +1,9 @@
-# Point Cloud Labeling Tool
+# Dokered Point Cloud Labeling Tool
 
  Tool for labeling of a single point clouds or a stream of point clouds. 
  Fork from https://github.com/jbehley/point_labeler
+ 
+ **This fork is specific for [RELLIS-3D dataset](https://github.com/unmannedlab/RELLIS-3D)**
  
 <img src="https://user-images.githubusercontent.com/11506664/63230808-340d5680-c212-11e9-8902-bc08f0f64dc8.png" width=500>
 
@@ -85,5 +87,14 @@ If you're using the tool in your research, it would be nice if you cite our [pap
       year = {2019}
 }
 ```
-
-We used the tool to label SemanticKITTI, which contains overall over 40.000 scans organized in 20 sequences. 
+[paper](https://arxiv.org/abs/2011.12954):
+```
+@misc{jiang2020rellis3d,
+      title={RELLIS-3D Dataset: Data, Benchmarks and Analysis}, 
+      author={Peng Jiang and Philip Osteen and Maggie Wigness and Srikanth Saripalli},
+      year={2020},
+      eprint={2011.12954},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```

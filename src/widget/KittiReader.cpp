@@ -35,10 +35,10 @@ void KittiReader::initialize(const QString& directory) {
   readPoses(base_dir_.filePath("poses.txt").toStdString(), poses_);
 
   // create label dir, etc.
-  QDir labels_dir(base_dir_.filePath("labels"));
+  QDir labels_dir(base_dir_.filePath("os1_cloud_node_semantickitti_label_id"));
 
   // find corresponding label files.
-  if (!labels_dir.exists()) base_dir_.mkdir("labels");
+  if (!labels_dir.exists()) base_dir_.mkdir("os1_cloud_node_semantickitti_label_id");
 
   for (uint32_t i = 0; i < velodyne_filenames_.size(); ++i) {
     QString filename = QFileInfo(QString::fromStdString(velodyne_filenames_[i])).baseName() + ".label";

@@ -29,7 +29,7 @@
 * Install [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) 
 * `git clone https://github.com/unmannedlab/point_labeler.git`
 * `cd point_labeler`
-* `./build`
+* `./build_image`
 
 
 ## Usage

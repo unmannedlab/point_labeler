@@ -46,7 +46,7 @@ if __name__ == "__main__":
 
   args = parser.parse_args()
 
-  labels_path = os.path.join(args.input, "labels")
+  labels_path = os.path.join(args.input, "os1_cloud_node_semantickitti_label_id")
   velodyne_path = os.path.join(args.input, "os1_cloud_node_kitti_bin")
 
   if not os.path.exists(labels_path):

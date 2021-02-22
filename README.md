@@ -62,7 +62,7 @@ When loading a dataset, the data must be organized as follows:
 <pre>
 point cloud folder
 ├── os1_cloud_node_kitti_bin/             -- directory containing ".bin" files with Velodyne point clouds.   
-├── labels/   [optional]  -- label directory, will be generated if not present.  
+├── os1_cloud_node_semantickitti_label_id/   [optional]  -- label directory, will be generated if not present.  
 ├── pylon_camera_node/  [optional]  -- directory containing ".png" files from the color   camera.  
 ├── calib.txt             -- calibration of velodyne vs. camera. needed for projection of point cloud into camera.  
 └── poses.txt             -- file containing the poses of every scan.
